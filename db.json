@@ -1,0 +1,22 @@
+{
+  "todos": [
+    {
+      "id": 1,
+      "titulo": "Fazer compras",
+      "descricao": "Comprar leite, ovos e pão.",
+      "status": "Done"
+    },
+    {
+      "id": 2,
+      "titulo": "Estudar para a prova",
+      "descricao": "Revisar os capítulos 1 a 3.",
+      "status": "Doing"
+    },
+    {
+      "id": 3,
+      "titulo": "Limpar o quarto",
+      "descricao": "Arrumar a bagunça e passar o aspirador.",
+      "status": "To do"
+    }
+  ]
+}

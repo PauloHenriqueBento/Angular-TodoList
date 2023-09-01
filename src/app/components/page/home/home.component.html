@@ -1,0 +1,53 @@
+<mat-card>
+    <mat-card-content class="container">
+        <button mat-fab color="primary">
+            <mat-icon>add</mat-icon>
+        </button>
+        <div cdkDropListGroup>
+            <div class="example-container">
+                <h2>To do</h2>
+                <div cdkDropList [cdkDropListData]="todo" class="example-list" (cdkDropListDropped)="drop($event)"
+                    id="todo-container">
+                    <mat-card class="card-move" *ngFor="let task of todo" cdkDrag>
+                        <mat-card-header class="card-header-custom">
+                            <h3>{{ task.titulo }}</h3>
+                        </mat-card-header>
+                        <mat-card-content>
+                            <p>{{ task.descricao }}</p>
+                        </mat-card-content>
+                    </mat-card>
+                </div>
+            </div>
+
+            <div class="example-container">
+                <h2>Doing</h2>
+                <div cdkDropList [cdkDropListData]="doing" class="example-list" (cdkDropListDropped)="drop($event)"
+                    id="doing-container">
+                    <mat-card class="card-move" *ngFor="let task of doing" cdkDrag>
+                        <mat-card-header>
+                            <h3>{{ task.titulo }}</h3>
+                        </mat-card-header>
+                        <mat-card-content>
+                            <p>{{ task.descricao }}</p>
+                        </mat-card-content>
+                    </mat-card>
+                </div>
+            </div>
+
+            <div class="example-container">
+                <h2>Done</h2>
+                <div cdkDropList [cdkDropListData]="done" class="example-list" (cdkDropListDropped)="drop($event)"
+                    id="done-container">
+                    <mat-card class="card-move" *ngFor="let task of done" cdkDrag>
+                        <mat-card-header>
+                            <h3>{{ task.titulo }}</h3>
+                        </mat-card-header>
+                        <mat-card-content>
+                            <p>{{ task.descricao }}</p>
+                        </mat-card-content>
+                    </mat-card>
+                </div>
+            </div>
+        </div>
+    </mat-card-content>
+</mat-card>
